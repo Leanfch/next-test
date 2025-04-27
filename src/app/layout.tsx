@@ -1,27 +1,41 @@
-import Link from "next/link"
+import { ReactNode } from "react"
+import { Montserrat } from "next/font/google";
+import { Roboto } from "next/font/google";
+import "./globals.css"
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 
 export const metadata = {
     title: "NextJs Prueba",
     description: "Descripción de prueba para la página de prueba :)",
-    keywords: ["Prueba", "NextJs"]
+    keywords: ["Prueba", "NextJs"]   
 }
 
-export default function RootLayout({children}) {
+type Props = {
+    children: ReactNode;
+}
+
+const montserrat = Montserrat({
+    display: "swap",
+    subsets: ["latin"],
+    weight: ["400", "700", "800"],
+})
+
+const roboto = Roboto({
+    display: "swap",
+    subsets: ["latin"],
+    weight: ["400", "700"],
+})
+
+export default function RootLayout({children}: Props) {
     return (
-        <html>
+        <html lang="es">
             <body>
-                <header>
-                    <nav>
-                        <ul>
-                            <li><Link href="/">Home</Link></li>
-                            <li><Link href="/about">About</Link></li>
-                        </ul>
-                    </nav>
-                </header>
-                {children}
-                <footer>
-                    <p>Todos los derechos reservados &copy; - 2025 </p>
-                </footer>
+                <Header />
+                <main>
+                    {children}
+                </main>
+                <Footer />
             </body>
         </html>
     )

@@ -1,0 +1,284 @@
+header {
+    background-color: #141516;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    max-height: 97px;
+
+    h1::after {
+        display: none;
+    }
+
+    section {
+        display: flex;
+        flex-direction: row;
+        overflow: visible;
+        margin: 0 auto;
+        position: relative;
+        width: 100%;
+
+        >ul {
+            align-items: center;
+            display: flex;
+            flex: 1;
+            justify-content: flex-start;
+            list-style: none;
+            padding-left: 2rem;
+            vertical-align: middle;
+
+            li:nth-child(1) {
+                margin-left: 0;
+            }
+
+            li {
+                margin: 0 1.4rem;
+                line-height: 1.6;
+
+                a.logo-main {
+                    display: inline-block;
+                    min-width: 172px;
+                    text-indent: -999em;
+                    overflow: hidden;
+                    height: 46px;
+                    background: url(https://davinci.edu.ar/images/logo-davinci-blanco.svg) no-repeat;
+                    background-size: 172px 46px;
+                    margin-bottom: 4px;
+                }
+            }
+
+            li.mobile-contact {
+                display: none;
+                padding-right: 2rem;
+                margin-right: 0;
+            }
+        }
+
+        >nav {
+            ul {
+                list-style-type: none;
+                display: flex;
+                justify-content: flex-end;
+                margin-right: 0;
+                white-space: nowrap;
+                padding-left: 2rem;
+                align-items: center;
+                vertical-align: middle;
+
+                li:first-child {
+                    margin-left: 0;
+                }
+
+                li {
+                    margin: 0 1.4rem;
+                    padding-bottom: 2rem;
+                    position: relative;
+                    text-align: center;
+                    font-size: 1.8rem;
+                    line-height: 1.6em;
+
+                    a {
+                        border-bottom: 3px solid transparent;
+                        color: #fff;
+                        display: inline-block;
+                        font-family: "Montserrat", sans-serif;
+                        font-weight: 800;
+                        padding-top: 2.3rem;
+                        position: relative;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                    }
+
+                }
+
+                li:hover {
+                    a {
+                        border-bottom: 3px solid #0ce8ab;
+                    }
+                }
+
+                li.dropdown {
+                    a { 
+                        padding-right: 2rem;
+                    }
+                    >ul {
+                        background-color: #141516;
+                        display: block;
+                        list-style-type: none;
+                        opacity: 0;
+                        padding: 14px 2rem 2rem;
+                        position: absolute;
+                        top: 8.4rem;
+                        transform: opacity .1s visibility .1s;
+                        transition-delay: .1s;
+                        visibility: hidden;
+                        z-index: 1000;
+
+                        li {
+                            text-align: left;
+                            margin: 0;
+                            line-height: 1.6em;
+                            padding: 0;
+
+                            a {
+                                padding: 4px 4px 0;
+                                font-family: "Montserrat", sans-serif;
+                                font-size: 1.6rem;
+                                border-bottom: 3px solid transparent;
+                                display: inline-block;
+                            }
+                        }
+
+                        li:hover {
+                            background-color: #0ce8ab;
+                        }
+
+                        li.highlight {
+                            a {
+                                color: #0ce8ab;
+                            }
+                        }
+
+                        li.highlight:hover {
+                            background-color: #0ce8ab;
+
+                            a {
+                                color: #fff;
+                            }
+                        }
+                    }
+
+                    >a::after {
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        font-family: "icomoon";
+                        font-weight: 100;
+                        font-style: normal;
+                        line-height: 2;
+                        text-align: center;
+                        font-size: 1rem;
+                        content: '\e905';
+                    }
+                }
+
+                li.dropdown:hover {
+                    ul {
+                        opacity: 1;
+                        visibility: visible;
+                        transition: opacity .1s visibility .1s;
+                        transition-delay: 0s;
+                    }
+                }
+
+                li.main-contact {
+                    font-size: 1.6rem;
+                    padding: 0;
+                    margin-right: 0;
+                    text-align: center;
+                    position: relative;
+                 
+                    a {
+                        border: none;
+                        padding: 3.3rem 0 3.1rem;
+                        background-color: #db0f80;
+                        max-width: 21.6rem;
+                        display: flex;
+                        vertical-align: middle;
+                        text-align: left;
+                        align-items: center;
+                        line-height: 1em;
+
+                        span {
+                            display: inline-block;
+                            white-space: normal;
+                            max-width: 12.6rem;
+                            padding-right: 3.6rem;
+                        }
+                    }
+
+                    a:hover {
+                        background-color: #c30d72;
+                    }
+
+                    a::before {
+                        content: '\e90b';
+                        font-family: "icomoon";
+                        padding-right: 1rem;
+                        font-size: 4rem;
+                        line-height: 32px;
+                        padding-left: 3.6rem;
+                        display: inline-block;
+                        font-weight: 100;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1129px) {
+    header {
+        section {
+            >nav {
+                ul {
+                    li.news-link {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    header {
+        section {
+            >nav {
+                display: none;
+            }
+
+            >ul {
+                justify-content: space-between;
+                li {
+                    a {
+                        line-height: 1.6em;
+                    }
+
+                    a.button-side-nav {
+                        font-size: 2.6rem;
+                        padding: 3.3rem 0 3.1rem;
+                        line-height: 32px;
+                        display: inline-block;
+                        color: #fff;
+                        text-decoration: none;
+                    }
+                    a.button-side-nav::before {
+                        content: '\e91c';
+                        font-family: "icomoon";
+                        font-weight: 100;
+                    }                    
+                }
+                
+                li.mobile-contact{
+                    display: inline-block;
+                    a {
+                        text-align: right;
+                        text-decoration: none;
+                        color: #fff;
+                        display: inline-block;
+                        font-size: 1.8rem;
+                    }
+                    a::before {
+                        content: '\e90b';
+                        font-family: "icomoon";
+                        padding: 10px;
+                        background-color: #db0f80;
+                        border-radius: 50%;
+                        font-weight: 100;
+                    }
+                }
+            }
+        }
+    }
+}

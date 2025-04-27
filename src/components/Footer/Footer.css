@@ -1,0 +1,134 @@
+footer {
+    section.footer-small {
+        background-color: #141516;
+        color: #fff;
+        font-size: 1.6rem;
+        padding: 3rem 0;
+
+        >ul {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            margin: auto;
+            list-style-type: none;
+            max-width: 122rem;
+            padding: 0 2rem;
+            position: relative;
+            width: 100%;
+
+            >li:nth-child(1) {
+                flex: 1 1 25%;
+                width: 100%;
+
+                a {
+                    display: block;
+                    background: url(https://davinci.edu.ar/images/logo-davinci-blanco.svg) no-repeat;
+                    background-size: 172px 46px;
+                    background-position-x: left;
+                    text-indent: -999em;
+                    overflow: hidden;
+                    height: 46px;
+                }
+            }
+
+            >li:nth-child(2) {
+                flex: 1 1 50%;
+                text-align: center;
+
+                p {
+                    color: #fff;
+                    font-size: 1.6rem;
+                    line-height: 1.8em;
+                }
+            }
+
+            >li:nth-child(3) {
+                flex: 1 1 25%;
+                max-width: 50%;
+
+                ul {
+                    display: flex;
+                    list-style-type: none;
+                    justify-content: flex-end;
+                    font-size: 3.4rem;
+                    max-width: none;
+                    margin: 0;
+                    padding: 0;
+
+                    li {
+                        padding: 0 .5rem;
+                        position: relative;
+
+                        a {
+                            background: none;
+                            font-size: 3.4rem;
+
+                            i {
+                                line-height: 1;
+                                color: #0ce8ab;
+                            }
+
+                            i.facebook::before {
+                                content: '\e900';
+                            }
+
+                            i.twitter::before {
+                                content: '\e903';
+                            }
+
+                            i.instagram::before {
+                                content: '\e901';
+                            }
+
+                            i.youtube::before {
+                                content: '\e904';
+                            }
+
+                            i.linkedin::before {
+                                content: '\e902';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    footer {
+        section.footer_small {
+            >ul {
+                >li:nth-child(1) {
+                    width: 100%;
+                    flex: 0 0 100%;
+                    margin-bottom: 2rem;
+
+                    a {
+                        background-position-x: center;
+                    }
+                }
+
+                >li:nth-child(2) {
+                    flex: 0 0 100%;
+                    text-align: center;
+                    margin-bottom: 2rem;
+                }
+
+                >li:nth-child(3) {
+                    flex: 0 0 100%;
+                    max-width: 50%;
+                    margin: auto;
+
+                    ul {
+                        justify-content: center;
+
+                        li {
+                            padding: 0 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

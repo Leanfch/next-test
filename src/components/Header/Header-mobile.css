@@ -1,0 +1,137 @@
+section#side-nav {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    display: none;
+
+    a.menu-close {
+        position: absolute;
+        z-index: 2;
+        font-size: 2rem;
+        top: 2rem;
+        right: 3rem;
+        color: #fff;
+        text-decoration: none;
+
+        i.icon-times::before {
+            content: '\e91b';
+            font-family: "icomoon";
+            font-style: normal;
+            line-height: 1;
+        }
+    }
+
+    nav {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        overflow: scroll;
+        padding: 6rem 0;
+        background-color: #222427;
+        scrollbar-width: none;
+
+        div {
+            padding: 1rem 1rem 1rem 4rem;
+
+            ul:first-child {
+                font-size: 22px;
+                font-weight: 800;
+                font-family: "Montserrat", sans-serif;
+                list-style: none;
+
+                li {
+                    cursor: pointer;
+                    min-height: 33px;
+                    padding: 5px 0;
+                    line-height: 1.6em;
+
+                    a {
+                        color: #0ce8ab;
+                    }
+                }
+
+                li.dropdown {
+                    p {
+                        font-size: 22px;
+                        font-weight: 800;
+                        font-family: "Montserrat", sans-serif;
+                        line-height: 1.6em;
+
+                        a {
+                            color: #0ce8ab;
+                            line-height: 1.4rem;
+                            text-decoration: none;
+                        }
+
+                        span {
+                            color: #0ce8ab;
+                            padding: 0 20px;
+                            vertical-align: middle;
+                            float: right;
+                            font-size: 18px;
+                            cursor: pointer;
+
+                            i.icon-angle-up {
+                                display: inline-block;
+                            }
+
+                            i.icon-angle-up::before {
+                                content: '\e92d';
+                                transition: transform 0.3s;
+
+                            }
+
+                            i.icon-angle-down::before {
+                                transition: transform 0.3s;
+                                content: '\e905';
+                            }
+                        }
+                    }
+
+                    ul {
+                        list-style-type: disc;
+                        font-size: 18px;
+                        padding: 0 2rem;
+                        width: 100%;
+                        display: none;
+
+                        li {
+                            padding: 4px 0;
+                            min-height: 33px;
+                            font-size: 18px;
+                            line-height: 1.6em;
+
+                            a {
+                                color: #fff;
+                                line-height: 1.1em;
+                                padding: 6px 0;
+                            }
+                        }
+                    }
+                }
+
+                li.dropdown.open {
+                    ul {
+                        display: block;
+                    }
+
+                    p {
+                        span {
+                            i {
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
