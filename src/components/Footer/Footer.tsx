@@ -17,7 +17,7 @@ export default function Footer() {
           </li>
           <li>
             <p>
-              Copyright 2024 - <strong>Da Vinci Primera Escuela de Arte Multimedial</strong>
+              Copyright 2025 - <strong>Da Vinci Primera Escuela de Arte Multimedial</strong>
             </p>
             <p>Todos los derechos reservados.</p>
           </li>
