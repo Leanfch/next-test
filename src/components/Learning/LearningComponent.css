@@ -1,0 +1,167 @@
+section.md-learning {
+    background-color: #f3f3f3;
+    padding: 8rem 2rem;
+    position: relative;
+    overflow: hidden;
+
+    .svg {
+        position: absolute;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .bubble-left {
+        width: 50%;
+        top: 30%;
+        left: -10%;
+        transform: translate(0, -50%);
+    }
+
+    .bubble-right {
+        width: 50%;
+        top: 60%;
+        right: -10%;
+        transform: translate(0, -50%);
+    }
+
+    section {
+        max-width: 122rem;
+        margin: 0 auto;
+        position: relative;
+        padding: 0 2rem;
+        z-index: 2;
+        width: 100%;
+
+        h1 {
+            text-align: center;
+        }
+
+        h1::after {
+            left: 50%;
+            margin-left: -3rem;
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+
+            li {
+                padding: 1rem;
+                flex: 0 0 33.3333333333%;
+                max-width: 33.3333333333%;
+                text-align: center;
+
+                article {
+                    background-color: #fff;
+                    padding: 3rem 2rem;
+                    height: 100%;
+                    border-radius: 4px;
+                    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, .1);
+                    font-size: 1.6rem;
+                    line-height: 1.4em;
+
+                    div {
+                        i {
+                            font-size: 8rem;
+                            color: #0ce8ab;
+                            line-height: 1;
+                        }
+                    }
+
+                    h2 {
+                        height: 2.2em;
+                        overflow: hidden;
+                        font-size: 2.4rem;
+                        margin-top: 3rem;
+                        font-family: "Montserrat", sans-serif;
+                        font-weight: 800;
+                        margin-bottom: 1rem;
+                    }
+
+                    p {
+                        font-size: 1.6rem;
+                        line-height: 1.4em;
+                    }
+                }
+            }
+
+            .icon-pencil-paintbrush::before {
+                content: "\e916";
+            }
+
+            .icon-network-wired::before {
+                content: "\e915";
+            }
+
+            .icon-cube::before {
+                content: "\e914";
+            }
+
+            .icon-running::before {
+                content: "\e917";
+            }
+
+            .icon-vr-cardboard::before {
+                content: "\e91a";
+            }
+
+            .icon-map-signs::before {
+                content: "\e919";
+            }
+        }
+
+        aside {
+            max-width: 98rem;
+            margin: auto;
+            padding-top: 8rem;   
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    section.md-learning {
+        section {
+            padding: 0;
+            ul {    
+                li {
+                    flex: 0 0 50%;
+                    max-width: 50%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    section.md-learning {
+        section {
+            ul {
+                li {
+                    flex: 100%;
+                    max-width: 100%;
+
+                    article {
+                        h2 {
+                            height: auto;
+                        }
+                    }
+                }
+            }
+        }
+        .bubble-left {
+            width: 100%;
+            top: 30%;
+            left: -10%;
+            transform: translate(0, -50%);
+        }
+
+        .bubble-right {
+            width: 100%;
+            top: 60%;
+            right: -10%;
+            transform: translate(0, -50%);
+        }
+    }
+}
