@@ -1,4 +1,5 @@
 import Banner from "@/components/Banner/Banner"
+import TitlesComponent from "@/components/TitlesComponent/TitlesComponent"
 import TwoSections from "@/components/TwoSections/TwoSections"
 
 export const metadata = {
@@ -10,6 +11,7 @@ export default function HomePage() {
         <>
             <Banner />
             <TwoSections />
+            <TitlesComponent />
         </>
     )
 }

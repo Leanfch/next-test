@@ -1,0 +1,79 @@
+section.md-titles {
+    max-width: 98rem;
+    margin: auto;
+    padding: 8rem 2rem;
+    position: relative;
+    
+    article {
+        margin: 6rem 0;
+
+        ul {
+            padding-left: 3rem;
+            margin-bottom: 3rem;
+            font-family: "Roboto", sans-serif;
+
+            li {
+                margin-bottom: 3rem;
+                line-height: 1.6em;
+
+                span.title {
+                    font-size: 2.4rem;
+                    font-weight: 800;
+                    font-family: "Montserrat", sans-serif;
+                    line-height: 1.6em;
+                }
+
+                span.text {
+                    font-size: 2.2rem;
+                    font-weight: 800;
+                    line-height: 1.6em;
+                }
+
+                span.light {
+                    font-size: 2.2rem;
+                    color: #555;
+                    line-height: 1.6em;
+
+                }
+
+                span.small {
+                    display: block;
+                    font-size: 1.8rem;
+                    color: #555;
+                    line-height: 1.6em;
+
+                }
+            }
+
+            li::before {
+                font-family: "icomoon";
+                font-size: 3rem;
+                content: "\e906";
+                color: #0ce8ab;
+                display: inline-block;
+                font-weight: 700;
+                width: 26px;
+                margin-left: -30px;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    p {
+        margin: 0 0 3rem;
+    }
+
+    h2 {
+        font-size: 2.6rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 800;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    section.md-titles {
+        padding: 6rem 2rem;
+    }
+}
