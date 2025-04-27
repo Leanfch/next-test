@@ -1,4 +1,5 @@
 import Banner from "@/components/Banner/Banner"
+import CoursesWorks from "@/components/CoursesWork/CoursesWork"
 import LearningComponent from "@/components/Learning/LearningComponent"
 import TitlesComponent from "@/components/TitlesComponent/TitlesComponent"
 import TwoSections from "@/components/TwoSections/TwoSections"
@@ -14,6 +15,7 @@ export default function HomePage() {
             <TwoSections />
             <TitlesComponent />
             <LearningComponent />
+            <CoursesWorks />
         </>
     )
 }

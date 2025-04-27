@@ -1,0 +1,77 @@
+section.md-courses-works {
+    section {
+        padding: 0 2rem;
+        padding-top: 8rem;
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 0 auto;
+        max-width: 122rem;
+
+        figure {
+            flex: 1;
+            max-height: none;
+
+            img {
+                transform: translate(0) scale(1);
+                max-width: 100%;
+                width: 100%;
+                height: auto;
+                vertical-align: middle;
+            }
+        }
+
+        article {
+            flex: 1;
+            padding-left: 6rem;
+            padding-top: 2rem;
+        }
+    }
+
+    section:nth-child(2) {
+        padding-bottom: 8rem;
+
+        figure {
+            order: 2;
+        }
+
+        article {
+            order: 1;
+            padding-left: 0;
+            padding-right: 6rem;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    section.md-courses-works {
+        section {
+            padding: 6rem 2rem;
+            flex-wrap: wrap;
+
+            figure {
+                flex: 0 0 100%;
+            }
+        }
+
+        section:nth-child(1) {
+            padding-bottom: 0;
+
+            article {
+                padding: 0;
+                padding-top: 2rem;
+            }
+        }
+
+        section:nth-child(2) {
+            padding-bottom: 6rem;
+            figure {
+                order: 1;
+            }
+            article {
+                order: 2;
+                padding: 0;
+                padding-top: 2rem;
+            }
+        }
+    }
+}

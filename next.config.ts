@@ -1,7 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    domains: ['images.cdn.thinkion.com.ar']
+  },
 };
 
 export default nextConfig;
