@@ -1,0 +1,161 @@
+section.md-two-sections {
+    background-color: #222427;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    ul {
+        margin: 0 auto;
+        list-style: none;
+        max-width: 124rem;
+        flex-wrap: nowrap;
+        display: flex;
+        flex-direction: row;
+
+        li {
+            padding: 4rem 2rem 5rem 2rem;
+            flex: 1 1 auto;
+            text-align: left;
+            color: #fff;
+            
+            article {
+                border-left: 4px solid;
+                padding-left: 2rem;
+                display: flex;
+                align-items: center;
+                height: 100%;
+
+                div {
+                    padding-right: 3rem;
+                    flex: 1 0;
+
+                    h1 {
+                        padding: 0 0 .5rem;
+                        margin: 0;
+                        font-size: 2.2rem;
+                        font-weight: 800;
+                        text-align: left;
+                    }
+
+                    h1::after {
+                        display: none;
+                    }
+
+                    p {
+                        color: #fff;
+                        font-size: 1.4rem;
+                        line-height: 1.2em;
+                        margin: 0;
+                    }
+                }
+
+                a {
+                    flex: 0 0 auto;
+                    margin: 0;
+                    font-size: 1.4rem;
+                    padding: 1rem 1.6em;
+                    display: inline-block;
+                    border-radius: 3rem;
+                    background-color: transparent;
+                    color: #fff;
+                    border: 2px solid #fff;
+                    font-weight: 800;
+                    font-family: "Roboto", sans-serif;
+                    line-height: 1.6em;
+                }
+
+                a:hover {
+                    background-color: #fff;
+                    color: #555;
+                }
+            }
+        }
+
+        li:nth-child(1) {
+            article {
+                border-color: #564bfd;
+            }
+        }
+
+        li:nth-child(2) {
+            article {
+                border-color: #db0f80;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    section.md-two-sections {
+        ul {
+            flex-wrap: wrap;
+            flex-direction: column;
+
+            li {
+                padding: 2rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 639px) {
+    section.md-two-sections {
+        ul {
+            li {
+                flex: 1;
+                text-align: center;
+                padding: 4rem 2rem;
+
+                article {
+                    flex-direction: column;
+                    border: none;
+                    padding: 0;
+
+                    div {
+                        padding: 0;
+                        h1 {
+                            padding: 24px 0 .5rem;
+                        }
+
+                        h1::before {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 50%;
+                            margin-left: -27px;
+                            height: 4px;
+                            width: 54px;
+                            border-top: 4px solid;
+                        }
+                    }
+
+                    a {
+                        margin: 2rem 0 0 0;
+                    }
+                }
+            }
+
+            li:nth-child(1) {
+                article {
+                    div {
+                        h1::before {
+                            border-top-color: #db0f80;
+                        }
+                    }
+                }
+            }
+
+            li:nth-child(2) {
+                padding-top: 0;
+                article {
+                    div {
+                        h1::before {
+                            border-top-color: #564bfd;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
