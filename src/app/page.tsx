@@ -1,6 +1,7 @@
 import Banner from "@/components/Banner/Banner"
-import CoursesWorks from "@/components/CoursesWork/CoursesWork"
+import CoursesWorks from "@/components/CoursesWorks/CoursesWorks"
 import LearningComponent from "@/components/Learning/LearningComponent"
+import PrideComponent from "@/components/PrideComponent/PrideComponent"
 import TitlesComponent from "@/components/TitlesComponent/TitlesComponent"
 import TwoSections from "@/components/TwoSections/TwoSections"
 
@@ -16,6 +17,7 @@ export default function HomePage() {
             <TitlesComponent />
             <LearningComponent />
             <CoursesWorks />
+            <PrideComponent />
         </>
     )
 }

@@ -1,0 +1,90 @@
+section.md-pride {
+    background-color: #f3f3f3;
+    background-image: url("https://images.cdn.thinkion.com.ar/dv/diseno-multimedial/module-background-two-colors-big.webp");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 0;
+
+    h2 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 900;
+        position: relative;
+        line-height: 1.1em;
+        font-size: 3.6rem;
+        padding-bottom: 2rem;
+        margin-bottom: 3rem;
+    }
+    h1::after,
+    h2::after {
+        content: "";
+        display: flex;
+        position: absolute;
+        height: 3px;
+        width: 6rem;
+        border-bottom: 3px solid #0ce8ab;
+        left: 50%;
+        bottom: 0;
+        box-sizing: inherit;
+        margin-left: -3rem;
+    }
+
+    p {
+        font-family: "Roboto", sans-serif;
+        color: #555;
+        text-align: center;
+        max-width: 980px;
+        margin: 0 auto;
+        line-height: 1.6em;
+    }
+
+    ul.md-logos {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        max-width: 1600px;
+        grid-template-rows: 1fr 1fr;
+        list-style-type: none;
+        padding: 0 2rem;
+
+        li {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    a.pink-button {
+        margin-top: 2rem;
+        padding: 15px 20px;
+    }
+
+    #slider-pride {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    section.md-pride {
+        background-image: none;
+        ul.md-logos {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    section.md-pride {
+        ul.md-logos {
+            padding: 0 1rem;
+            width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+        }
+    }
+}
