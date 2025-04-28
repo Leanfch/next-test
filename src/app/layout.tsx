@@ -29,10 +29,10 @@ const roboto = Roboto({
 
 export default function RootLayout({children}: Props) {
     return (
-        <html lang="es">
+        <html lang="es" className={montserrat.className}>
             <body>
                 <Header />
-                <main>
+                <main className={roboto.className}>
                     {children}
                 </main>
                 <Footer />
